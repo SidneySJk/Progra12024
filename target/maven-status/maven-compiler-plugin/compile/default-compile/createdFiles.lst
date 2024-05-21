@@ -2,6 +2,7 @@ Interfaz\Trivia$1.class
 Interfaz\VPrinci$6.class
 Interfaz\VPrinci$1.class
 Interfaz\EjecutarTriviaGrafico$7.class
+Interfaz\VentanaComentario.class
 Interfaz\grafico$2.class
 Interfaz\Trivia$6.class
 Interfaz\Trivia$3.class
@@ -9,16 +10,19 @@ crearTrivia\EjecutarTrivia.class
 crearTrivia\Pregunta.class
 Interfaz\VPrinci$3.class
 Interfaz\Trivia$4.class
+Interfaz\VentanaComentario$1.class
 Interfaz\EjecutarTriviaGrafico$2.class
 Interfaz\EjecutarTriviaGrafico$5.class
 Interfaz\VentanaCorreo$3.class
 Interfaz\VPrinci$5.class
+Interfaz\VentanaComentario$4.class
 Interfaz\grafico.class
 Interfaz\Trivia.class
 Interfaz\grafico$1.class
 Interfaz\VPrinci$2.class
 Interfaz\GenerarReporte.class
 Interfaz\Trivia$2.class
+Interfaz\VentanaComentario$2.class
 crearTrivia\Comentario.class
 Interfaz\EjecutarTriviaGrafico$10.class
 Interfaz\EjecutarTriviaGrafico$8.class
@@ -28,6 +32,7 @@ Interfaz\EjecutarTriviaGrafico$3.class
 crearTrivia\GenerarTrivia.class
 Interfaz\EjecutarTriviaGrafico$9.class
 Interfaz\EjecutarTriviaGrafico.class
+Interfaz\VentanaComentario$3.class
 Interfaz\Trivia$5.class
 Interfaz\VPrinci$4.class
 Interfaz\EjecutarTriviaGrafico$1.class
