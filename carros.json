@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-9RM5yddI5bZEw9LqS7ymlsiABgc1F",
+  "object": "chat.completion",
+  "created": 1.716306818E9,
+  "model": "gpt-3.5-turbo-0125",
+  "choices": [
+    {
+      "index": 0.0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n    \"preguntas\": [\n        {\n            \"pregunta\": \"¿Cuál es el piloto con más títulos de Fórmula 1 en la historia?\",\n            \"opciones\": [\n                {\"respuesta\": \"Ayrton Senna\", \"correcta\": \"no\"},\n                {\"respuesta\": \"Michael Schumacher\", \"correcta\": \"si\"},\n                {\"respuesta\": \"Lewis Hamilton\", \"correcta\": \"no\"},\n                {\"respuesta\": \"Sebastian Vettel\", \"correcta\": \"no\"}\n            ]\n        },\n        {\n            \"pregunta\": \"¿En qué circuito se lleva a cabo el Gran Premio de Mónaco de Fórmula 1?\",\n            \"opciones\": [\n                {\"respuesta\": \"Monza\", \"correcta\": \"no\"},\n                {\"respuesta\": \"Suzuka\", \"correcta\": \"no\"},\n                {\"respuesta\": \"Mónaco\", \"correcta\": \"si\"},\n                {\"respuesta\": \"Interlagos\", \"correcta\": \"no\"}\n            ]\n        },\n        {\n            \"pregunta\": \"¿Qué piloto español ha ganado más títulos mundiales de MotoGP?\",\n            \"opciones\": [\n                {\"respuesta\": \"Valentino Rossi\", \"correcta\": \"no\"},\n                {\"respuesta\": \"Casey Stoner\", \"correcta\": \"no\"},\n                {\"respuesta\": \"Jorge Lorenzo\", \"correcta\": \"si\"},\n                {\"respuesta\": \"Marc Márquez\", \"correcta\": \"no\"}\n            ]\n        },\n        {\n            \"pregunta\": \"¿Cuántas carreras conforman el campeonato de Fórmula 1 en una temporada?\",\n            \"opciones\": [\n                {\"respuesta\": \"18\", \"correcta\": \"no\"},\n                {\"respuesta\": \"20\", \"correcta\": \"no\"},\n                {\"respuesta\": \"22\", \"correcta\": \"si\"},\n                {\"respuesta\": \"24\", \"correcta\": \"no\"}\n            ]\n        },\n        {\n            \"pregunta\": \"¿Cuál es el coche de rally más exitoso en la historia del Campeonato del Mundo de Rally?\",\n            \"opciones\": [\n                {\"respuesta\": \"Ford Fiesta\", \"correcta\": \"no\"},\n                {\"respuesta\": \"Subaru Impreza\", \"correcta\": \"no\"},\n                {\"respuesta\": \"Lancia Delta\", \"correcta\": \"no\"},\n                {\"respuesta\": \"Volkswagen Polo\", \"correcta\": \"si\"}\n            ]\n        },\n        {\n            \"pregunta\": \"¿En qué país se encuentra el circuito de Interlagos, donde se celebra el Gran Premio de Brasil de Fórmula 1?\",\n            \"opciones\": [\n                {\"respuesta\": \"Italia\", \"correcta\": \"no\"},\n                {\"respuesta\": \"España\", \"correcta\": \"no\"},\n                {\"respuesta\": \"Brasil\", \"correcta\": \"si\"},\n                {\"respuesta\": \"México\", \"correcta\": \"no\"}\n            ]\n        }\n    ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 145.0,
+    "completion_tokens": 644.0,
+    "total_tokens": 789.0
+  }
+}

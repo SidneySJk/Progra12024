@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-9RM9iby0lUnIX2dpGFh0XDcRYmioH",
+  "object": "chat.completion",
+  "created": 1.71630705E9,
+  "model": "gpt-3.5-turbo-0125",
+  "choices": [
+    {
+      "index": 0.0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"preguntas\": [\n    {\n      \"pregunta\": \"¿Cuál de estos perros es considerado una raza pequeña?\",\n      \"opciones\": [\n        {\"respuesta\": \"Labrador Retriever\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Chihuahua\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Pastor Alemán\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Dálmata\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál es el peso aproximado de un Yorkshire Terrier adulto?\",\n      \"opciones\": [\n        {\"respuesta\": \"30 kg\", \"correcta\": \"no\"},\n        {\"respuesta\": \"5 kg\", \"correcta\": \"si\"},\n        {\"respuesta\": \"15 kg\", \"correcta\": \"no\"},\n        {\"respuesta\": \"20 kg\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál de estos perros es conocido por ser valiente y alerta?\",\n      \"opciones\": [\n        {\"respuesta\": \"Golden Retriever\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Dachshund\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Pomerania\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Beagle\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál es el origen del Pug?\",\n      \"opciones\": [\n        {\"respuesta\": \"Estados Unidos\", \"correcta\": \"no\"},\n        {\"respuesta\": \"China\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Francia\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Alemania\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál de estos perros es ideal para vivir en espacios reducidos?\",\n      \"opciones\": [\n        {\"respuesta\": \"Border Collie\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Bulldog Francés\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Siberian Husky\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Rottweiler\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál de los siguientes es un perro de compañía muy popular por su tamaño pequeño?\",\n      \"opciones\": [\n        {\"respuesta\": \"Husky Siberiano\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Bichón Maltés\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Doberman\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Boxer\", \"correcta\": \"no\"}\n      ]\n    }\n  ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 145.0,
+    "completion_tokens": 610.0,
+    "total_tokens": 755.0
+  }
+}

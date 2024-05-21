@@ -161,23 +161,23 @@ public class GenerarTrivia {
         // Parsea el contenido JSON interno de trivia
         JSONObject triviaJson = new JSONObject(triviaContent);
         JSONArray preguntas = triviaJson.getJSONArray("preguntas");
-        System.out.println("Preguntas de Trivia:");
+    //    System.out.println("Preguntas de Trivia:");
         for (int i = 0; i < preguntas.length(); i++) {
           JSONObject pregunta = preguntas.getJSONObject(i);
-          System.out.println((i + 1) + ". " + pregunta.getString("pregunta"));
+    //      System.out.println((i + 1) + ". " + pregunta.getString("pregunta"));
 
           JSONArray respuestas = pregunta.getJSONArray("opciones");
           for (int j = 0; j < respuestas.length(); j++) {
             JSONObject respuesta = respuestas.getJSONObject(j);
-            System.out.print("   - " + respuesta.getString("respuesta"));
+    //        System.out.print("   - " + respuesta.getString("respuesta"));
 
-            if (respuesta.getString("correcta").equals("si")) { // System.out.println();
+    /*        if (respuesta.getString("correcta").equals("si")) { // System.out.println();
               System.out.println(" (correcta)"); // Muestra cual es la respuesta correcta. Cuando la
                                                  // progra este lista 'comentar' el if/else excepto
                                                  // un println
             } else {
               System.out.println();
-            }
+            }*/
           }
           System.out.println();
         }
@@ -185,12 +185,14 @@ public class GenerarTrivia {
     } catch (IOException e) {
       System.out.println("Error al leer archivo: " + e.getMessage());
       System.out.println("NUEVA TRIVIA GENERANDOSE!!!");
-      System.out.println(chatGPT(prompt));
+      //System.out.println(chatGPT(prompt));
+      chatGPT(prompt);
       LectorTriviaJSON();
     } catch (Exception e) {
       System.out.println("Error al procesar JSON: " + e.getMessage());
       System.out.println("NUEVA TRIVIA GENERANDOSE!!!");
-      System.out.println(chatGPT(prompt));
+      //System.out.println(chatGPT(prompt));
+      chatGPT(prompt);
       LectorTriviaJSON();
     }
   }
