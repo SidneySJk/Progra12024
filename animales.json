@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-9RLjAgHJvZJgs5h4qkJ83phYPQlLG",
+  "object": "chat.completion",
+  "created": 1.716305404E9,
+  "model": "gpt-3.5-turbo-0125",
+  "choices": [
+    {
+      "index": 0.0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"preguntas\": [\n    {\n      \"pregunta\": \"¿Cuál es el animal más icónico del desierto de Sahara?\",\n      \"opciones\": [\n        {\"respuesta\": \"Camello\", \"correcta\": \"si\"},\n        {\"respuesta\": \"León\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Cobra\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Jirafa\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Qué animal es conocido por sobrevivir largos periodos sin agua en el desierto?\",\n      \"opciones\": [\n        {\"respuesta\": \"Camello\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Rata canguro\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Tortuga\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Canguro\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál de estos animales es una especie típica del desierto de Atacama?\",\n      \"opciones\": [\n        {\"respuesta\": \"Zorro del desierto\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Oso pardo\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Tigre\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Elefante\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Qué animal es conocido por almacenar grasa en su joroba para sobrevivir en el desierto?\",\n      \"opciones\": [\n        {\"respuesta\": \"Rata canguro\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Iguana del desierto\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Dromedario\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Cobra del desierto\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál de estos animales es una especie adaptada para vivir en los desiertos de Australia?\",\n      \"opciones\": [\n        {\"respuesta\": \"Camello\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Koala\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Perro de la pradera\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Canguro rojo\", \"correcta\": \"si\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál es el animal que se caracteriza por sus largas patas adaptadas para caminar sobre la arena del desierto?\",\n      \"opciones\": [\n        {\"respuesta\": \"Jirafa\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Cangrejo ermitaño\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Escorpión\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Araña de camello\", \"correcta\": \"si\"}\n      ]\n    }\n  ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 145.0,
+    "completion_tokens": 661.0,
+    "total_tokens": 806.0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-9RLpHCLYV42JdkLM3hztp0iui5fRb",
+  "object": "chat.completion",
+  "created": 1.716305783E9,
+  "model": "gpt-3.5-turbo-0125",
+  "choices": [
+    {
+      "index": 0.0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"preguntas\": [\n    {\n      \"pregunta\": \"¿Cuál es el país de origen de la expresión \u0027haha\u0027?\",\n      \"opciones\": [\n        {\"respuesta\": \"Estados Unidos\", \"correcta\": \"si\"},\n        {\"respuesta\": \"España\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Japón\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Alemania\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿En qué redes sociales es común encontrar la palabra \u0027haha\u0027?\",\n      \"opciones\": [\n        {\"respuesta\": \"Facebook y Twitter\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Instagram y TikTok\", \"correcta\": \"no\"},\n        {\"respuesta\": \"WhatsApp y Snapchat\", \"correcta\": \"si\"},\n        {\"respuesta\": \"LinkedIn y Pinterest\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál es la función de la risa en el lenguaje no verbal?\",\n      \"opciones\": [\n        {\"respuesta\": \"Expresar tristeza\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Comunicar alegría\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Manifestar enojo\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Demostrar miedo\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál es el equivalente en inglés de la expresión \u0027jaja\u0027 en español?\",\n      \"opciones\": [\n        {\"respuesta\": \"Hoho\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Lol\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Hehe\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Haha\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Qué significa \u0027haha\u0027 en el contexto de un mensaje de texto?\",\n      \"opciones\": [\n        {\"respuesta\": \"Que el mensaje es serio\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Que se está contando un chiste\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Que la persona está aburrida\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Que se necesita ayuda urgente\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿En qué tipo de conversaciones es más frecuente utilizar la expresión \u0027haha\u0027?\",\n      \"opciones\": [\n        {\"respuesta\": \"Discusiones políticas\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Charlas profesionales\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Conversaciones informales entre amigos\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Entrevistas de trabajo\", \"correcta\": \"no\"}\n      ]\n    }\n  ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 144.0,
+    "completion_tokens": 639.0,
+    "total_tokens": 783.0
+  }
+}
