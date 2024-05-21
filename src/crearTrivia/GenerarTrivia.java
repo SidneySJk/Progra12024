@@ -1,5 +1,6 @@
 package crearTrivia;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -66,7 +67,7 @@ public class GenerarTrivia {
    */
   public String chatGPT(String prompt) {
     String url = "https://api.openai.com/v1/chat/completions";
-    String apiKey = "sk-proj-7CDXoF434h95sfsiVhI3T3BlbkFJmO028QJFQAIObRasK6IZ"; // API KEY GENERADO
+    String apiKey = "OPENAI_API_KEY"; // API KEY GENERADO
     String model = "gpt-3.5-turbo";
 
     try {
