@@ -67,7 +67,7 @@ public class GenerarTrivia {
    */
   public String chatGPT(String prompt) {
     String url = "https://api.openai.com/v1/chat/completions";
-    String apiKey = "API KEY GENERADO"; // API KEY GENERADO
+    String apiKey = "API KEY GENERADOg"; // API KEY GENERADO
     String model = "gpt-3.5-turbo";
 
     try {
@@ -162,37 +162,38 @@ public class GenerarTrivia {
         // Parsea el contenido JSON interno de trivia
         JSONObject triviaJson = new JSONObject(triviaContent);
         JSONArray preguntas = triviaJson.getJSONArray("preguntas");
-        System.out.println("Preguntas de Trivia:");
+        System.out.println("GENERANDO TRIVIA...");
         for (int i = 0; i < preguntas.length(); i++) {
           JSONObject pregunta = preguntas.getJSONObject(i);
-          System.out.println((i + 1) + ". " + pregunta.getString("pregunta"));
+          // System.out.println((i + 1) + ". " + pregunta.getString("pregunta"));
 
           JSONArray respuestas = pregunta.getJSONArray("opciones");
           for (int j = 0; j < respuestas.length(); j++) {
             JSONObject respuesta = respuestas.getJSONObject(j);
-            System.out.print("   - " + respuesta.getString("respuesta"));
+            // System.out.print(" - " + respuesta.getString("respuesta"));
 
             if (respuesta.getString("correcta").equals("si")) { // System.out.println();
-              System.out.println(" (correcta)"); // Muestra cual es la respuesta correcta. Cuando la
-                                                 // progra este lista 'comentar' el if/else excepto
-                                                 // un println
+              // System.out.println(" (correcta)"); // Muestra cual es la respuesta correcta. Cuando
+              // la
+              // progra este lista 'comentar' el if/else excepto
+              // un println
             } else {
-              System.out.println();
+              // System.out.println(".");
             }
           }
-          System.out.println();
+          // System.out.println("..");
         }
       }
     } catch (IOException e) {
       System.out.println("Error al leer archivo: " + e.getMessage());
-      System.out.println("NUEVA TRIVIA GENERANDOSE!!!");
-      System.out.println(chatGPT(prompt));
+      System.out.println("GENERANDO TRIVIA....");
+      // System.out.println(chatGPT(prompt));
       LectorTriviaJSON();
     } catch (Exception e) {
       System.out.println("Error al procesar JSON: " + e.getMessage());
-      System.out.println("NUEVA TRIVIA GENERANDOSE!!!");
+      System.out.println("GENERANDO TRIVIA.....");
       System.out.println(chatGPT(prompt));
-      LectorTriviaJSON();
+      // LectorTriviaJSON();
     }
   }
   /*

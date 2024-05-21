@@ -39,17 +39,17 @@ public class EjecutarTriviaGrafico extends JFrame {
   private int tiempoComodin;
   private Timer countdownTimer;
   private List<JRadioButton> currentRadioButtons;
-  
-  
-      // Variables para almacenar resultados y estadísticas
-    private List<String> respuestasUsuario;
-    private List<Pregunta> preguntasFallidas;
-    private boolean comodin5050Usado;
-    private boolean comodinTiempoExtraUsado;
-    private List<Long> tiemposRespuesta;
-    private long tiempoInicioPregunta;
-    private String filePath;
-    
+
+
+  // Variables para almacenar resultados y estadísticas
+  private List<String> respuestasUsuario;
+  private List<Pregunta> preguntasFallidas;
+  private boolean comodin5050Usado;
+  private boolean comodinTiempoExtraUsado;
+  private List<Long> tiemposRespuesta;
+  private long tiempoInicioPregunta;
+  private String filePath;
+
   public EjecutarTriviaGrafico(Jugador pPlayer) {
     jugador = pPlayer;
     tiempoComodin = 60;
@@ -58,13 +58,13 @@ public class EjecutarTriviaGrafico extends JFrame {
     setSize(600, 300);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setLocationRelativeTo(null);
-    
-            // Inicializar variables de resultados y estadísticas
-        respuestasUsuario = new ArrayList<>();
-        preguntasFallidas = new ArrayList<>();
-        tiemposRespuesta = new ArrayList<>();
-        comodin5050Usado = false;
-        comodinTiempoExtraUsado = false;
+
+    // Inicializar variables de resultados y estadísticas
+    respuestasUsuario = new ArrayList<>();
+    preguntasFallidas = new ArrayList<>();
+    tiemposRespuesta = new ArrayList<>();
+    comodin5050Usado = false;
+    comodinTiempoExtraUsado = false;
 
     // Crear el panel principal
     JPanel panel = new JPanel();
@@ -76,7 +76,7 @@ public class EjecutarTriviaGrafico extends JFrame {
     menu = new JMenu("Opciones");
     menu2 = new JMenu("Informacion");
     menu3 = new JMenuItem("INICIAR TRIVIA");
-    
+
     generarPastel = new JMenuItem("Generar grafico pastel");
     generarPastel.addActionListener(new ActionListener() {
       @Override
@@ -87,7 +87,7 @@ public class EjecutarTriviaGrafico extends JFrame {
 
       }
     });
-    
+
     generarReporteMenu = new JMenuItem("Generar Reporte");
     generarReporteMenu.addActionListener(new ActionListener() {
       @Override
@@ -96,8 +96,8 @@ public class EjecutarTriviaGrafico extends JFrame {
         mostrarResumen();
       }
     });
-    
-    
+
+
     menu2.add(generarPastel);
     menu2.add(generarReporteMenu);
     menu2.setEnabled(false);
@@ -110,29 +110,29 @@ public class EjecutarTriviaGrafico extends JFrame {
         menu3.setEnabled(false);
       }
     });
-    
+
 
     seleccionarTrivia = new JMenuItem("Seleccionar Trivia");
     seleccionarTrivia.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
         mostrarFileChooser();
-        
+
       }
     });
     menu.add(seleccionarTrivia);
 
-    
+
     JMenuItem salir = new JMenuItem("Salir");
-    
-    
+
+
     salir.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
         int respuesta = JOptionPane.showConfirmDialog(null, "¿Está seguro de que desea salir?",
             "Confirmación", JOptionPane.YES_NO_OPTION);
         if (respuesta == JOptionPane.YES_OPTION) {
-            dispose();       
+          dispose();
         }
       }
     });
@@ -159,23 +159,24 @@ public class EjecutarTriviaGrafico extends JFrame {
     botonTiempoExtra = new JButton("Tiempo Extra");
     botonTiempoExtra.addActionListener(new ActionListener() {
       @Override
-            public void actionPerformed(ActionEvent e) {
-                int response = JOptionPane.showConfirmDialog(null, "¿Desea utilizar el comodín tiempo extra?", "Confirmación", JOptionPane.YES_NO_OPTION);
-                if (response == JOptionPane.YES_OPTION) {
-                    // Agregar tiempo extra
-                    usarComodinTiempoExtra(tiempoComodin); // Agrega x segundos
-                    countdownLabel.setText("Tiempo restante: " + countdownSeconds + " segundos");
-                    JOptionPane.showMessageDialog(null, "Comodín Tiempo Extra utilizado");
-                    botonTiempoExtra.setEnabled(false);
-                    comodinTiempoExtraUsado = true;
-                }
+      public void actionPerformed(ActionEvent e) {
+        int response = JOptionPane.showConfirmDialog(null,
+            "¿Desea utilizar el comodín tiempo extra?", "Confirmación", JOptionPane.YES_NO_OPTION);
+        if (response == JOptionPane.YES_OPTION) {
+          // Agregar tiempo extra
+          usarComodinTiempoExtra(tiempoComodin); // Agrega x segundos
+          countdownLabel.setText("Tiempo restante: " + countdownSeconds + " segundos");
+          JOptionPane.showMessageDialog(null, "Comodín Tiempo Extra utilizado");
+          botonTiempoExtra.setEnabled(false);
+          comodinTiempoExtraUsado = true;
+        }
       }
     });
 
     comodinesPanel.add(boton5050);
     comodinesPanel.add(botonTiempoExtra);
-    
-    //Muestra los botones deshabilitados, hasta que se inicia la trivia
+
+    // Muestra los botones deshabilitados, hasta que se inicia la trivia
     boton5050.setEnabled(false);
     botonTiempoExtra.setEnabled(false);
 
@@ -192,7 +193,7 @@ public class EjecutarTriviaGrafico extends JFrame {
     // Crear el panel para las opciones
     JPanel opcionesPanel = new JPanel();
     opcionesPanel.setLayout(new GridLayout(0, 1));
- // Crear el panel para el Graficopastel
+    // Crear el panel para el Graficopastel
     JPanel graficoPastel = new JPanel();
     graficoPastel.setLayout(new GridLayout(0, 2));
 
@@ -208,27 +209,26 @@ public class EjecutarTriviaGrafico extends JFrame {
         mostrarSiguientePregunta();
       }
     });
-    
+
 
     // Crear el panel para mostrar los resultados
     JPanel resultadosPanel = new JPanel();
     resultadosPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-    resultadosLabel = new JLabel(
-        "Tiempo Restante: ");
+    resultadosLabel = new JLabel("Tiempo Restante: ");
     resultadosPanel.add(resultadosLabel);
-    
-    
+
+
     // Crear el JLabel para la cuenta regresiva
     countdownLabel = new JLabel("Tiempo restante: ");
-    preguntaPanel.add(countdownLabel, BorderLayout.NORTH);    
-    
+    preguntaPanel.add(countdownLabel, BorderLayout.NORTH);
+
 
     // Agregar los componentes al panel principal
     panel.add(comodinesPanel, BorderLayout.WEST);
     panel.add(preguntaPanel, BorderLayout.CENTER);
     panel.add(opcionesPanel, BorderLayout.EAST);
     panel.add(siguienteButton, BorderLayout.SOUTH);
- //   panel.add(resultadosPanel, BorderLayout.NORTH);
+    // panel.add(resultadosPanel, BorderLayout.NORTH);
   }
 
   private void mostrarFileChooser() {
@@ -244,12 +244,12 @@ public class EjecutarTriviaGrafico extends JFrame {
     int result = fileChooser.showOpenDialog(this);
     if (result == JFileChooser.APPROVE_OPTION) {
       // Obtener el archivo seleccionado
-    filePath = fileChooser.getSelectedFile().getAbsolutePath();
-      //cargarTrivia(filePath);
-     menu3.setEnabled(true);
+      filePath = fileChooser.getSelectedFile().getAbsolutePath();
+      // cargarTrivia(filePath);
+      menu3.setEnabled(true);
     }
   }
-  
+
 
   private void cargarTrivia(String filePath) {
     triviaPreguntas = EjecutarTrivia.cargarPreguntas(filePath);
@@ -269,7 +269,7 @@ public class EjecutarTriviaGrafico extends JFrame {
     siguienteButton.setEnabled(true);
     boton5050.setEnabled(true);
     botonTiempoExtra.setEnabled(true);
-    
+
   }
 
 
@@ -280,7 +280,7 @@ public class EjecutarTriviaGrafico extends JFrame {
     opcionesButtonGroup.clearSelection();
     JPanel opcionesPanel = (JPanel) getContentPane().getComponent(2);
     opcionesPanel.removeAll();
-    
+
     currentRadioButtons = new ArrayList<>();
 
     // Agregar las opciones al panel
@@ -291,31 +291,31 @@ public class EjecutarTriviaGrafico extends JFrame {
       opcionesPanel.add(radioButton);
       currentRadioButtons.add(radioButton);
     }
-    
-            // Iniciar la cuenta regresiva de 30 segundos (o el tiempo que desees)
-        countdownSeconds = jugador.getTiempo();
-        countdownLabel.setText("Tiempo restante: " + countdownSeconds + " segundos");
-        if (countdownTimer != null) {
-            countdownTimer.stop();
-        }
-        countdownTimer = new Timer(1000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (countdownSeconds > 0) {
-                    countdownSeconds--;
-                    countdownLabel.setText("Tiempo restante: " + countdownSeconds + " segundos");
-                } else {
-                    countdownTimer.stop();
-                    JOptionPane.showMessageDialog(null, "¡Tiempo agotado!");
-                    registrarRespuesta();
-                    mostrarSiguientePregunta();
-                }
-            }
-        });
-        countdownTimer.start();
 
-        // Registrar el tiempo de inicio de la pregunta
-        tiempoInicioPregunta = System.currentTimeMillis();
+    // Iniciar la cuenta regresiva de 30 segundos (o el tiempo que desees)
+    countdownSeconds = jugador.getTiempo();
+    countdownLabel.setText("Tiempo restante: " + countdownSeconds + " segundos");
+    if (countdownTimer != null) {
+      countdownTimer.stop();
+    }
+    countdownTimer = new Timer(1000, new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        if (countdownSeconds > 0) {
+          countdownSeconds--;
+          countdownLabel.setText("Tiempo restante: " + countdownSeconds + " segundos");
+        } else {
+          countdownTimer.stop();
+          JOptionPane.showMessageDialog(null, "¡Tiempo agotado!");
+          registrarRespuesta();
+          mostrarSiguientePregunta();
+        }
+      }
+    });
+    countdownTimer.start();
+
+    // Registrar el tiempo de inicio de la pregunta
+    tiempoInicioPregunta = System.currentTimeMillis();
 
     // Actualizar la ventana
     revalidate();
@@ -362,107 +362,108 @@ public class EjecutarTriviaGrafico extends JFrame {
       mostrarResumen();
     }
   }
-  
-      private void registrarRespuesta() {
-        String respuestaSeleccionada = opcionesButtonGroup.getSelection() == null ? "Sin responder" : opcionesButtonGroup.getSelection().getActionCommand();
-        respuestasUsuario.add(respuestaSeleccionada);
 
-        // Calcular y almacenar el tiempo de respuesta
-        long tiempoRespuesta = System.currentTimeMillis() - tiempoInicioPregunta;
-        tiemposRespuesta.add(tiempoRespuesta);
+  private void registrarRespuesta() {
+    String respuestaSeleccionada = opcionesButtonGroup.getSelection() == null ? "Sin responder"
+        : opcionesButtonGroup.getSelection().getActionCommand();
+    respuestasUsuario.add(respuestaSeleccionada);
 
-        // Verificar si la respuesta es incorrecta
-        Pregunta pregunta = triviaPreguntas.get(preguntaActualIndex);
-        if (!respuestaSeleccionada.equals(pregunta.getRespuestaCorrecta())) {
-            preguntasFallidas.add(pregunta);
-        }
+    // Calcular y almacenar el tiempo de respuesta
+    long tiempoRespuesta = System.currentTimeMillis() - tiempoInicioPregunta;
+    tiemposRespuesta.add(tiempoRespuesta);
+
+    // Verificar si la respuesta es incorrecta
+    Pregunta pregunta = triviaPreguntas.get(preguntaActualIndex);
+    if (!respuestaSeleccionada.equals(pregunta.getRespuestaCorrecta())) {
+      preguntasFallidas.add(pregunta);
     }
-  
-      private void usarComodin5050() {
-        if (triviaPreguntas == null || triviaPreguntas.isEmpty() || currentRadioButtons == null || currentRadioButtons.isEmpty()) {
-            return;
-        }
+  }
 
-        Pregunta pregunta = triviaPreguntas.get(preguntaActualIndex);
-        String respuestaCorrecta = pregunta.getRespuestaCorrecta();
-        List<JRadioButton> opcionesIncorrectas = new ArrayList<>();
-
-        for (JRadioButton radioButton : currentRadioButtons) {
-            if (!radioButton.getActionCommand().equals(respuestaCorrecta)) {
-                opcionesIncorrectas.add(radioButton);
-            }
-        }
-
-        Collections.shuffle(opcionesIncorrectas);
-
-        // Deshabilitar dos opciones incorrectas
-        for (int i = 0; i < 2 && i < opcionesIncorrectas.size(); i++) {
-            opcionesIncorrectas.get(i).setEnabled(false);
-        }
-
-        // Deshabilitar el botón "50/50" después de usarlo
-        boton5050.setEnabled(false);
+  private void usarComodin5050() {
+    if (triviaPreguntas == null || triviaPreguntas.isEmpty() || currentRadioButtons == null
+        || currentRadioButtons.isEmpty()) {
+      return;
     }
-      
-    private void usarComodinTiempoExtra(int pSegundos){
-      countdownSeconds += pSegundos; 
+
+    Pregunta pregunta = triviaPreguntas.get(preguntaActualIndex);
+    String respuestaCorrecta = pregunta.getRespuestaCorrecta();
+    List<JRadioButton> opcionesIncorrectas = new ArrayList<>();
+
+    for (JRadioButton radioButton : currentRadioButtons) {
+      if (!radioButton.getActionCommand().equals(respuestaCorrecta)) {
+        opcionesIncorrectas.add(radioButton);
+      }
     }
+
+    Collections.shuffle(opcionesIncorrectas);
+
+    // Deshabilitar dos opciones incorrectas
+    for (int i = 0; i < 2 && i < opcionesIncorrectas.size(); i++) {
+      opcionesIncorrectas.get(i).setEnabled(false);
+    }
+
+    // Deshabilitar el botón "50/50" después de usarlo
+    boton5050.setEnabled(false);
+  }
+
+  private void usarComodinTiempoExtra(int pSegundos) {
+    countdownSeconds += pSegundos;
+  }
 
   private void actualizarResultados() {
     resultadosLabel
         .setText("Respuestas correctas: " + respuestasCorrectas + " | Respuestas incorrectas: "
             + respuestasIncorrectas + " | Respuestas sin responder: " + respuestasSinResponder);
   }
-  
-      private void deshabilitarOpciones() {
-        if (currentRadioButtons != null) {
-            for (JRadioButton radioButton : currentRadioButtons) {
-                radioButton.setEnabled(false);
-            }
-        }
+
+  private void deshabilitarOpciones() {
+    if (currentRadioButtons != null) {
+      for (JRadioButton radioButton : currentRadioButtons) {
+        radioButton.setEnabled(false);
+      }
     }
+  }
 
-      private void mostrarResumen() {
-          GenerarReporte reporte;
-          reporte = new GenerarReporte(triviaPreguntas, comodin5050Usado, comodinTiempoExtraUsado, respuestasUsuario, preguntasFallidas, tiemposRespuesta);
-        
+  private void mostrarResumen() {
+    GenerarReporte reporte;
+    reporte = new GenerarReporte(triviaPreguntas, comodin5050Usado, comodinTiempoExtraUsado,
+        respuestasUsuario, preguntasFallidas, tiemposRespuesta);
 
- // Mostrar el resumen en un JTextArea dentro de un JScrollPane
-        JTextArea resumenTextArea = new JTextArea(reporte.getResumen());
-        resumenTextArea.setEditable(false);
-        resumenTextArea.setLineWrap(true);
-        resumenTextArea.setWrapStyleWord(true);
 
-        JScrollPane scrollPane = new JScrollPane(resumenTextArea);
-        scrollPane.setPreferredSize(new Dimension(600, 400));
-        
-                // Crear botón "Enviar Reporte"
-        JButton enviarReporteButton = new JButton("Enviar Reporte");
-        enviarReporteButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Lógica para enviar el reporte
-                JOptionPane.showMessageDialog(null, "Reporte enviado!");
-                enviarReporteButton.setEnabled(false);
-            }
-        });
+    // Mostrar el resumen en un JTextArea dentro de un JScrollPane
+    JTextArea resumenTextArea = new JTextArea(reporte.getResumen());
+    resumenTextArea.setEditable(false);
+    resumenTextArea.setLineWrap(true);
+    resumenTextArea.setWrapStyleWord(true);
 
-     // Crear panel para contener JTextArea y botón
-        JPanel panel = new JPanel();
-        panel.setLayout(new BorderLayout());
-        panel.add(scrollPane, BorderLayout.CENTER);
-        panel.add(enviarReporteButton, BorderLayout.SOUTH);
+    JScrollPane scrollPane = new JScrollPane(resumenTextArea);
+    scrollPane.setPreferredSize(new Dimension(600, 400));
 
-        // Mostrar el panel en un JOptionPane
-        JOptionPane.showMessageDialog(this, panel, "Resumen de la trivia", JOptionPane.INFORMATION_MESSAGE);
-    }
-
- /* public static void main(String[] args) {
-    SwingUtilities.invokeLater(new Runnable() {
+    // Crear botón "Enviar Reporte"
+    JButton enviarReporteButton = new JButton("Enviar Reporte");
+    enviarReporteButton.addActionListener(new ActionListener() {
       @Override
-      public void run() {
-        new EjecutarTriviaGrafico().setVisible(true);
+      public void actionPerformed(ActionEvent e) {
+        // Lógica para enviar el reporte
+        JOptionPane.showMessageDialog(null, "Reporte enviado!");
+        enviarReporteButton.setEnabled(false);
       }
     });
-  }*/
+
+    // Crear panel para contener JTextArea y botón
+    JPanel panel = new JPanel();
+    panel.setLayout(new BorderLayout());
+    panel.add(scrollPane, BorderLayout.CENTER);
+    panel.add(enviarReporteButton, BorderLayout.SOUTH);
+
+    // Mostrar el panel en un JOptionPane
+    JOptionPane.showMessageDialog(this, panel, "Resumen de la trivia",
+        JOptionPane.INFORMATION_MESSAGE);
+  }
+
+  /*
+   * public static void main(String[] args) { SwingUtilities.invokeLater(new Runnable() {
+   * 
+   * @Override public void run() { new EjecutarTriviaGrafico().setVisible(true); } }); }
+   */
 }

@@ -137,10 +137,10 @@ public class VPrinci extends javax.swing.JFrame {
         player.setNombre(GenerarT.getNombre());
         player.setCorreo(GenerarT.getCorreo());
         player.setTiempo(GenerarT.getTiempo());
-        System.out.println(GenerarT.getCorreo());
-        System.out.println(GenerarT.getNombre());
-        System.out.println(GenerarT.getTiempo());
-        System.out.println(player.toString());
+        /*
+         * System.out.println(GenerarT.getCorreo()); System.out.println(GenerarT.getNombre());
+         * System.out.println(GenerarT.getTiempo()); System.out.println(player.toString());
+         */
       }
 
     });
