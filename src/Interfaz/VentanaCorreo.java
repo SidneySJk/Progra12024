@@ -94,7 +94,7 @@ public class VentanaCorreo extends javax.swing.JFrame {
     propiedad.put("mail.smtp.auth", "true");
 
     String correoEnvia = "joseasalazar04@gmail.com";
-    String contrasena = "rssf shjj dyyy iine";
+    String contrasena = "lovq fdmi zpil tamt";
     String receptor = jTextField1.getText();
     String asunto = "Resultados de la trivia";
     String mensaje =
