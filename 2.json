@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-9RBeKt6eiQieAxrqxwqEz3omqNfpw",
+  "object": "chat.completion",
+  "created": 1.716266664E9,
+  "model": "gpt-3.5-turbo-0125",
+  "choices": [
+    {
+      "index": 0.0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"preguntas\": [\n    {\n      \"pregunta\": \"¿Cuál es el nombre completo del director de la película \u0027Titanic\u0027?\",\n      \"opciones\": [\n        {\"respuesta\": \"James Cameron\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Steven Spielberg\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Martin Scorsese\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Quentin Tarantino\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿En qué ciudad se sitúa la famosa Torre Eiffel?\",\n      \"opciones\": [\n        {\"respuesta\": \"París\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Londres\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Roma\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Madrid\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Quién escribió la novela \u0027Cien años de soledad\u0027?\",\n      \"opciones\": [\n        {\"respuesta\": \"Gabriel García Márquez\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Julio Cortázar\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Laura Esquivel\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Pablo Neruda\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuál es el país más grande del mundo?\",\n      \"opciones\": [\n        {\"respuesta\": \"Rusia\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Estados Unidos\", \"correcta\": \"no\"},\n        {\"respuesta\": \"China\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Brasil\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿En qué año se dio la independencia de Estados Unidos?\",\n      \"opciones\": [\n        {\"respuesta\": \"1776\", \"correcta\": \"si\"},\n        {\"respuesta\": \"1821\", \"correcta\": \"no\"},\n        {\"respuesta\": \"1900\", \"correcta\": \"no\"},\n        {\"respuesta\": \"1945\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Quién pintó el famoso cuadro \u0027La Mona Lisa\u0027?\",\n      \"opciones\": [\n        {\"respuesta\": \"Leonardo da Vinci\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Pablo Picasso\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Vincent van Gogh\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Frida Kahlo\", \"correcta\": \"no\"}\n      ]\n    }\n  ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 145.0,
+    "completion_tokens": 596.0,
+    "total_tokens": 741.0
+  }
+}
