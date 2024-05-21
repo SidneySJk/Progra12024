@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EjecutarTrivia {
-
+    
   public static List<Pregunta> cargarPreguntas(String filePath) {
     StringBuilder content = new StringBuilder();
     List<Pregunta> triviaPreguntas = new ArrayList<>();
