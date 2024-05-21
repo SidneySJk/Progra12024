@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-9RDfm4q0u5Kji6SpEpKraiaNaCqtZ",
+  "object": "chat.completion",
+  "created": 1.716274442E9,
+  "model": "gpt-3.5-turbo-0125",
+  "choices": [
+    {
+      "index": 0.0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"preguntas\": [\n    {\n      \"pregunta\": \"¿Cuál es el nombre completo del juego de trivia?\",\n      \"opciones\": [\n        {\"respuesta\": \"8 en Puntos\", \"correcta\": \"no\"},\n        {\"respuesta\": \"8 en Preguntas\", \"correcta\": \"no\"},\n        {\"respuesta\": \"8 en Juego\", \"correcta\": \"no\"},\n        {\"respuesta\": \"8 en Puntos y Preguntas\", \"correcta\": \"si\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿En qué año fue lanzado el juego de trivia?\",\n      \"opciones\": [\n        {\"respuesta\": \"2019\", \"correcta\": \"no\"},\n        {\"respuesta\": \"2020\", \"correcta\": \"no\"},\n        {\"respuesta\": \"2021\", \"correcta\": \"si\"},\n        {\"respuesta\": \"2022\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Cuántos jugadores pueden participar de forma simultánea en el juego?\",\n      \"opciones\": [\n        {\"respuesta\": \"4\", \"correcta\": \"no\"},\n        {\"respuesta\": \"6\", \"correcta\": \"no\"},\n        {\"respuesta\": \"8\", \"correcta\": \"no\"},\n        {\"respuesta\": \"10\", \"correcta\": \"si\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Qué tipo de preguntas predominan en el juego?\",\n      \"opciones\": [\n        {\"respuesta\": \"Matemáticas\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Historia\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Cultura General\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Ciencias\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿Qué color predomina en el diseño del juego?\",\n      \"opciones\": [\n        {\"respuesta\": \"Azul\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Rojo\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Verde\", \"correcta\": \"si\"},\n        {\"respuesta\": \"Amarillo\", \"correcta\": \"no\"}\n      ]\n    },\n    {\n      \"pregunta\": \"¿En qué plataforma se puede jugar al juego de trivia 8?\",\n      \"opciones\": [\n        {\"respuesta\": \"PC\", \"correcta\": \"no\"},\n        {\"respuesta\": \"PlayStation\", \"correcta\": \"no\"},\n        {\"respuesta\": \"Android\", \"correcta\": \"no\"},\n        {\"respuesta\": \"iOS\", \"correcta\": \"si\"}\n      ]\n    }\n  ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 145.0,
+    "completion_tokens": 568.0,
+    "total_tokens": 713.0
+  }
+}
