@@ -67,7 +67,7 @@ public class GenerarTrivia {
    */
   public String chatGPT(String prompt) {
     String url = "https://api.openai.com/v1/chat/completions";
-    String apiKey = " "; // API KEY GENERADO
+    String apiKey = ""; // API KEY GENERADO
     String model = "gpt-3.5-turbo";
 
     try {
